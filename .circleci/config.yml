@@ -21,15 +21,19 @@ jobs:
       - run:
           name: Test
           command: npm test
+          working_directory: ./articles
       - run:
           name: Build PDF
           command: npm run pdf
       - store_artifacts:
-          path: ./articles/Nefry-TutorialBook.pdf
-          destination: Nefry-TutorialBook.pdf
+          path: ./articles/book.pdf
+          destination: book.pdf
+      - run:
+          name: ls
+          command: ls -la
       - run:
           name: chmod permissions
           command: chmod +x ./upload_dropbox.sh
       - run:
           name: Upload to Dropbox
-          command: ./upload_dropbox.sh ./articles/Nefry-Template.pdf ${DROPBOX_TOKEN}
+          command: ./upload_dropbox.sh ./articles/book.pdf ${DROPBOX_TOKEN}
