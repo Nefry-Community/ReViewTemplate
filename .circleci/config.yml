@@ -30,7 +30,7 @@ jobs:
           destination: book.pdf
       - run:
           name: ls
-          command: ls -la
+          command: pwd && find /root/project -ls
       - run:
           name: chmod permissions
           command: chmod +x ./upload_dropbox.sh
