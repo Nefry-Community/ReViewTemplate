@@ -1,39 +1,41 @@
 {
-  "name": "review-template",
+  "name": "Nefry-template",
   "version": "0.0.1",
   "private": true,
-  "description": "",
-  "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TechBooster/ReVIEW-Template.git"
+    "url": "git+https://github.com/Nefry-Community/ReViewTemplate"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TechBooster/ReVIEW-Template/issues"
+    "url": "https://github.com/Nefry-Community/ReViewTemplate/issues"
   },
-  "homepage": "https://github.com/TechBooster/ReVIEW-Template#readme",
+  "homepage": "https://github.com/Nefry-Community/ReViewTemplate#readme",
   "engines": {
     "node": ">=6.0.0"
   },
   "scripts": {
-    "global-bundler": "gem install bundler",
-    "global": "npm run global-bundler",
+    "global": "gem install bundler",
     "postinstall": "bundle install",
+    "check:prh": "prh --verify --verbose articles/*.re",
+    "check": "npm run check:prh",
     "pdf": "grunt pdf",
-    "md": "grunt markdown",
-    "html": "grunt html",
-    "test": "npm run html"
+    "epub": "grunt epub",
+    "web": "grunt web",
+    "html": "grunt html"
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "1.0.1",
-    "grunt-cli": "1.2.0",
-    "grunt-contrib-clean": "1.0.0",
-    "grunt-open": "0.2.3",
-    "grunt-shell": "1.3.0",
-    "js-yaml": "3.6.0",
-    "load-grunt-tasks": "3.5.0"
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-open": "^0.2.3",
+    "grunt-shell": "^1.3.0",
+    "js-yaml": "^3.6.0",
+    "load-grunt-tasks": "^3.5.0",
+    "prh": "^5.4.0",
+    "prh-languageserver": "^0.4.0"
   }
 }

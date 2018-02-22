@@ -3,3 +3,6 @@ Gemfile.lock
 *.pdf
 
 articles/*.html
+.sass-cache
+publish/
+articles/webroot/

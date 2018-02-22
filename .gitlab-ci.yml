@@ -6,7 +6,7 @@ build-pdf:
     - npm run pdf
   artifacts:
     paths:
-      - articles/ReVIEW-Template.pdf
+      - articles/Nefry-Template.pdf
   tags:
     - docker
 

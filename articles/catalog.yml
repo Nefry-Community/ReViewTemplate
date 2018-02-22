@@ -1,9 +1,10 @@
 PREDEF:
   - preface.re
 
+# この順で記事が生成される
 CHAPS:
-  - article.re
-
+  - start.re
+  - arduino.re
 APPENDIX:
 
 POSTDEF:

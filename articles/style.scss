@@ -1,3 +1,4 @@
+@charset "utf-8";
 // Variables
 $main-color: #64C1D7;
 $footer-link-color: #9e9e9e;
@@ -111,7 +112,7 @@ div.footnote {
 	height: 20vw;
 	background-color: $main-color;
 	color: white;
-	
+
 	// テキストは隠す
 	text-indent: 150%;
 	overflow: hidden;
